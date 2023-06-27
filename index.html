@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Final Project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <h1 class="hero-title">The <a class = 'highlight'>Geography</a> of <a class = 'highlight'>FRC</a> Teams</h1>
+      <h2 class="hero-author">By So Hirota</h2>
+      <p class="intro-text">
+        FRC (FIRST Robotics Competition) is an annual high school robotics competition that thousands of teams
+        across the globe. As an FRC alum, I was curious if geography played a role in how "good" teams are. In this data visualization,
+        we'll explore this question from the 🔎 lens of geography 🕵️.
+      </p>
+    </section>
+
+    <!-- chart 1 -->
+    <section>
+        <h1 class="section-title">"Strong Teams" By US Region: Midwest Dominance❓</h1>
+        <p class="section-text">
+          Let's start with a simple bar chart. I'll define 
+          a "strong team" as a <a class = 'highlight'>US based team that has won at least one regional,
+          district, championship division, or championship event between 1998 to 2023</a>.
+          I'm using <a href = 'https://www.tampaairport.com/sites/default/master/files/landing-pages/images/census-regions-graphic.png'>this</a> as a reference for US regional boundaries.
+        </p>
+      </section>
+      
+      <div class="chart-holder">
+        <div id="barchart-container"></div>
+      </div>
+      <p class="section-text">
+        Okay, that's a bar graph. But let's sort it to make it easier to interpret!
+      </p>
+      <button id = 'sort-q1'>Sort!</button>
+      <p class = 'section-text'>
+        That's better! We can see that the <a class = 'highlight'>Midwest has the most "strong teams"</a>, followed
+        by Northeast, South, then West (California noo 😐). But could this be because the 
+        Midwest simply has more teams? Click "Normalize!" to <a class = 'highlight'>normalize by the number of teams in each region</a> that have competed at least once.
+
+      </p>
+      <button id = 'normalize-q1'>Normalize!</button>
+      <p class = 'section-text'>
+        After normalization, this <a class = 'highlight'>bar chart represents the proportion of strong teams in that region.</a>
+        Now we see that the <a class = 'highlight'>Northeast region is stronger than the Midwest</a>.  The South and the West
+        also switched places (go Californiaaa 🫡)! It is interesting to observe that between the Northeast
+        and the South, there is a <a class = 'highlight'>10% difference in proportion</a> of "strong teams".
+      </p>
+
+    <!-- chart 2 -->
+    <section>
+      <h1 class="section-title">"Strong Teams" by State: Michigan For the Win🫅</h1>
+      <p class="section-text">
+        So we got an interesting result that the Midwest and the Northeast are generally
+        the "strongest" when it comes to FRC. Regions are pretty broad though, so let's examine <a class = 'highlight'>the number of strong teams
+        by each state</a> to get more granularity. For this, I'll use a "choropleth" visualization. 🗺️
+      </p>
+      <p class = 'section-text'>
+        <br>
+        Try hovering over a state you're interested in. It'll show you the number of strong teams
+        in that state and in that region. The <a class = 'blue1'>bluer</a> <a class = 'blue2'>the</a> <a class = 'blue3'>state</a> 
+        <a class = 'blue4'>is</a>, the higher the number of "strong teams". 
+      </p>
+    </section>
+    <div class="chart-holder">
+      <div id="choropleth-container"></div>
+    </div>
+    <p class="section-text">
+        Looking at this map, one thing strikes me; <a class = 'highlight'>Michigan is really strong, with 310 teams!</a>
+        This is more than double as many of California, which is in second place.
+        <a class = 'highlight'>Major population centers (ie California, New York, Texas) seem to have lots of strong teams</a>
+        as well, so Michigan is a very obvious outlier here. I recently learned that <a class = 'highlight'>Michigan is where FRC started</a>, so this makes sense!💡
+    </p>
+
+    <!-- chart 3 -->
+    <section>
+      <h1 class="section-title">Alliances and Geography: A Tale of Southern Betrayal 🥷</h1>
+      <p class="section-text">
+        Let's now shift our focus to alliances. Specifically, let's explore if <a class = 'highlight'>teams have a preference for teams
+        from the same region when selecting alliances</a> in championship divisions (Newton, Curie, etc). 
+      </p>
+    </section>
+    <div class="chart-holder">
+      <div id="nodelink-container"></div>
+    </div>
+    <p class="section-text">
+      This is a <a class = 'highlight'>force-directed network graph</a>. It's force-directed because each link (alliance relationship) acts like a spring,
+      forcing the nodes (teams) to spread out organically. This looks cool, but there's too much going on! <a class = 'highlight'>Click the buttons
+      below to isolate the regions.</a> <a class = 'red'>Intra-regional alliances</a> will be <a class = 'red'>highlighted red</a>, 
+      while <a class = 'blue'>inter-regional alliances</a> will be <a class = 'blue'>highlighted blue</a>.<br>
+      <a class = 'note'>Note: Intra-regional = within the same region</a>
+    </p>
+    <section> 
+        <div class = 'button-container'>
+            <button id = 'west-q3' class = 'next_to_each_other'>West</button>
+            <button id = 'northeast-q3' class = 'next_to_each_other'>Northeast</button>
+            <button id = 'south-q3' class = 'next_to_each_other'>South</button>
+            <button id = 'midwest-q3' class = 'next_to_each_other'>Midwest</button>
+            <button id = 'reset-q3' class = 'next_to_each_other'>Reset</button>
+        </div>
+    </section>
+    <p class = 'section-text'>
+        If you're interested in searching for a specific team, check out the search box below too!
+    </p>
+    <section>
+        <div>
+            <input type="text" class="text-input" placeholder="FRC Team #">
+            <button id = 'search_q3' class = 'next_to_each_other'>Search!</button>
+        </div>
+    </section>
+    <p class = "section-text">
+        We can now see <a class = 'highlight'>the association within Southern teams are weak</a>; that is, not many southern teams have chose to
+        be on the same alliance as other southern teams. We can see this because southern teams do not have many red connections, but do have many blue ones.
+        Conversely, <a class = 'highlight'>Midwest has a lot of intra-regional alliances</a>, as seen by the large number of red connections. This might
+        be due to the fact there are more Midwest teams, but it could also mean that Midwest teams usually prefer to team
+        up with Midwest teams. Perhaps, <a class = 'highlight'>if given an option to team up with a team from the same region, teams will prefer to do so?</a>
+    </p>
+    <section >
+        <h1 class="section-title">Lastly...🔭</h1>
+        <p class = 'section-text'>
+            I hope you enjoyed these visualizations! All of my javascript code is hosted here on Github. This was originally a 
+            data science class project at UCSD, but I have improved it since then so it would be good enough quality to host it 
+            on the public internet. If you discover any bugs, want to provide suggestions, or just want to get in touch, my email
+            is hirotaso92602 at gmail dot com. Thanks!<br>読んでくれてありがとう！😇<br><br><br><br>
+        </p>
+    </section>
+    <script src="barchart.js"></script>
+    <script src="choropleth.js"></script>
+    <script src="nodelink.js"></script>
+    <script src="counter.js"></script>
+  </body>
+</html>

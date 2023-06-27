@@ -1,0 +1,144 @@
+:root {
+    --text-width: 900px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: beige;
+}
+
+section {
+    width: var(--text-width);
+    margin: auto;
+    color: rgb(107, 106, 106);
+    font-size: 2rem;
+}
+
+.hero-title {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.hero-author {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.751);
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
+.chart-holder {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: black;
+}
+
+.section-text {
+    width: var(--text-width);
+    margin: auto;
+    font-size: 1.3rem;
+    color: rgb(132, 130, 130);
+}
+
+.intro-text {
+    text-align: center;
+    color: black;
+}
+
+.highlight {
+    color: black;
+}
+
+.red {
+    color: rgb(236, 97, 97);
+}
+
+.blue {
+    color: rgb(61, 61, 215);
+}
+
+.note {
+    font-size: 13px;
+}
+
+svg {
+    border: 2px solid rgb(220,220,220);
+    margin-top: 10px;
+}
+
+button {
+    margin: auto;
+    position: relative;
+    /* left: -320px; */
+    background-color: rgba(51, 51, 51, 0.1);
+    border-radius: 8px;
+    border-color: rgba(51, 51, 51, 0.5);
+    border-width: 1px;
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    text-align: center;
+    transition: all 200ms;
+    white-space: nowrap;
+    touch-action: manipulation;
+}
+
+.text-input {
+    margin: auto;
+    position: relative;
+    /* background-color: rgba(51, 51, 51, 0.1); */
+    border-radius: 8px;
+    border-color: rgba(51, 51, 51, 0.5);
+    border-width: 1px;
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    text-align: center;
+    transition: all 200ms;
+    white-space: nowrap;
+    touch-action: manipulation;
+    width: 100px; /* Adjust width as needed */
+    display: inline-block;
+  }
+  
+
+.next_to_each_other {
+    display: inline-block; /* Display buttons in a line */
+    margin-right: 10px; 
+}
+
+a.blue1 {
+    color: rgb(112, 176, 218);
+}
+
+a.blue2 {
+    color: rgb(92, 136, 218);
+}
+
+a.blue3 {
+    color: rgb(57, 110, 174);
+}
+
+a.blue4 {
+    color: rgb(46, 81, 157);
+}
+
+
+
+  
