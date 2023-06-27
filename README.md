@@ -1,2 +1,2 @@
-# frc-dataviz
-Interactive Data Viz for FRC (FIRST Robotics Competition) Teams
+# FRC Data Visuzalization Project
+This project was initially
