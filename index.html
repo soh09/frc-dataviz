@@ -14,7 +14,7 @@
             <h2 class="hero-author">By So Hirota</h2>
             <p class="intro-text">
                 FRC (FIRST Robotics Competition) is an annual high school robotics competition that thousands of teams
-                across the globe. As an FRC alum, I was curious if geography played a role in how "good" teams are. In this data visualization,
+                across the globe. As an FRC participant and alum, I was always curious what determined if a team was "strong". In this data visualization,
                 we'll explore this question from the 🔎 lens of geography 🕵️.
             </p>
         </section>
@@ -88,15 +88,16 @@
             <h1 class="section-title">Alliances and Geography: A Tale of Southern Betrayal 🥷</h1>
             <p class="section-text">
                 Let's now shift our focus to alliances. Specifically, let's explore if <a class = 'highlight'>teams have a preference for teams
-                from the same region when selecting alliances</a> in championship divisions (Newton, Curie, etc). 
+                from the same region when selecting alliances</a> in championship divisions (Newton, Curie, etc).<br>
+                This is a <a class = 'highlight'>force-directed network graph</a>. It's "force-directed" because each link (alliance relationship) acts like a spring,
+                forcing the nodes (teams) to spread out organically.
             </p>
         </section>
         <div class="chart-holder">
             <div id="nodelink-container"></div>
         </div>
         <p class="section-text">
-            This is a <a class = 'highlight'>force-directed network graph</a>. It's force-directed because each link (alliance relationship) acts like a spring,
-            forcing the nodes (teams) to spread out organically. This looks cool, but there's too much going on! <a class = 'highlight'>Click the buttons
+             This looks cool, but there's too much going on (and laggy, I know)! <a class = 'highlight'>Click the buttons
             below to isolate the regions.</a> <a class = 'red'>Intra-regional alliances</a> will be <a class = 'red'>highlighted red</a>, 
             while <a class = 'blue'>inter-regional alliances</a> will be <a class = 'blue'>highlighted blue</a>.<br>
             <a class = 'note'>Note: Intra-regional = within the same region</a>
@@ -120,8 +121,8 @@
             </div>
         </section>
         <p class = "section-text">
-            We can now see <a class = 'highlight'>the association within Southern teams are weak</a>; that is, not many southern teams have chose to
-            be on the same alliance as other southern teams. We can see this because southern teams do not have many red connections, but do have many blue ones.
+            We can now see the association within Southern teams are weak; that is, <a class = 'highlight'>not many southern teams have chose to
+            be on the same alliance as other southern teams</a>. We can see this because southern teams do not have many red connections, but do have many blue ones.
             Conversely, <a class = 'highlight'>Midwest has a lot of intra-regional alliances</a>, as seen by the large number of red connections. This might
             be due to the fact there are more Midwest teams, but it could also mean that Midwest teams usually prefer to team
             up with Midwest teams. Perhaps, <a class = 'highlight'>if given an option to team up with a team from the same region, teams will prefer to do so?</a>
@@ -139,8 +140,9 @@
             <p class = 'section-text'>
                 I used the <a href = 'https://frc-api-docs.firstinspires.org/?version=216cd832-1976-40b0-855b-3a4d92166c08'>FRC API</a> 
                 as well as <a href = 'https://www.thebluealliance.com/apidocs'>The Blue Alliance API</a> to pull pertinent FRC data. Both are free to access
-                with no rate limits. I <a class = 'highlight'>interfaced with the API using Python in a Jupyter notebooks</a>. I used Python for cleaning and formatting
-                the data as well. After that, I used <a class = 'highlight'>D3's built in rollup (group by operation) and filter function</a> to perform various aggregations.<br><br>
+                with no rate limits. I <a class = 'highlight'>interfaced with the API using Python in a Jupyter notebook</a>. I used Python for cleaning and formatting
+                the data as well. After that, I used <a class = 'highlight'>D3's built in rollup (group by operation) and filter function</a> to perform various aggregations
+                from within the JS scripts.<br><br>
             </p>
             <p class= 'section-text'>
                 All of my javascript code is hosted <a href = 'https://github.com/soh09/frc-dataviz'>here on Github</a>.
