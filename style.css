@@ -33,6 +33,12 @@ section {
     color: black;
 }
 
+.section-subtitle {
+    font-size: 1.4rem;
+    color: black;
+    margin-bottom: 0.1rem;
+}
+
 .section-text {
     width: var(--text-width);
     margin: auto;
@@ -138,7 +144,3 @@ a.blue3 {
 a.blue4 {
     color: rgb(46, 81, 157);
 }
-
-
-
-  

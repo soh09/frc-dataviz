@@ -119,10 +119,27 @@
         be due to the fact there are more Midwest teams, but it could also mean that Midwest teams usually prefer to team
         up with Midwest teams. Perhaps, <a class = 'highlight'>if given an option to team up with a team from the same region, teams will prefer to do so?</a>
     </p>
+    <section>
+        <h1 class = 'section-title'>Sidenote: How does this all work? 🧙‍♀️ (It's not magic)</h1>
+        <h2 class = 'section-subtitle'>The Code 💻</h2>
+        <p class = 'section-text'>
+            I used <a class = 'highlight'>pure javascript</a> (no frameworks) alongside <a class = 'highlight'>a powerful library called <a href = 'https://d3js.org/'>d3.js</a></a>. D3
+            (Data Driven Documents) is what allows the <a class = 'highlight'>smooth transition with beautiful animations</a>. It also <a class = 'highlight'>handles dynamic scaling</a>, like
+            when you clicked "Normalize" in the first viz. All the <a class = 'highlight'>nitty gritty simulation stuff for the node-link
+            diagram</a> is handsomely handled by D3 as well. 
+        </p>
+        <h2 class = 'section-subtitle'>The Data 📊</h2>
+        <p class = 'section-text'>
+            I used the <a href = 'https://frc-api-docs.firstinspires.org/?version=216cd832-1976-40b0-855b-3a4d92166c08'>FRC API</a> 
+            as well as <a href = 'https://www.thebluealliance.com/apidocs'>The Blue Alliance API</a> to pull pertinent FRC data. Both are free to access
+            with no rate limits. I <a class = 'highlight'>interfaced with the API using Python in a Jupyter notebooks</a>. I used Python for cleaning and formatting
+            the data as well. After that, I used <a class = 'highlight'>D3's built in rollup (group by operation) and filter function</a> to perform various aggregations. 
+        </p>
+    </section>
     <section >
         <h1 class="section-title">Lastly...🔭</h1>
         <p class = 'section-text'>
-            I hope you enjoyed these visualizations! All of my javascript code is hosted here on Github. This was originally a 
+            I hope you enjoyed these visualizations! All of my javascript code is hosted <a href = 'https://github.com/soh09/frc-dataviz'>here on Github</a>. This was originally a 
             data science class project at UCSD, but I have improved it since then so it would be good enough quality to host it 
             on the public internet. If you discover any bugs, want to provide suggestions, or just want to get in touch, my email
             is hirotaso92602 at gmail dot com. Thanks!<br>読んでくれてありがとう！😇<br><br><br><br>
